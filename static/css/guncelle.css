@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('/static/resimler/arkaplan1.jpg'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin: 0;
+    padding: 0;
+}
+
+    .sayfag {
+        max-width: 600px;
+        margin: 50px auto;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+    }
+
+    .kitap-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .kitap-form h2 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .kitap-form label {
+        margin-bottom: 8px;
+    }
+
+    .kitap-form input,
+    .kitap-form button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    .kitap-form button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    .kitap-form button:hover {
+        background-color: #45a049;
+    }
+
+    .hata {
+        color: red;
+        margin-top: -10px;
+        margin-bottom: 20px;
+    }

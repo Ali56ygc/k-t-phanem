@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kütüphanemize Kayıt Ol</title>
+  <link rel="stylesheet" href="/static/css/kaydol.css">
+</head>
+<body>
+  <div class="main">
+    <form action="{{ url_for('kayit') }}" method="post">
+      <label>Kaydol</label>
+      <input type="text" name="isim" placeholder="Kullanıcı adı" required>
+      <input type="email" name="email" placeholder="Email giriniz" required>
+      <input type="password" name="sifre" placeholder="Şifre giriniz" required>
+      <button>Kaydol</button>
+      {% if hata %}
+        <label class="hata">{{ hata }}</label>
+      {% endif %}
+      <button onclick="redirectToHome()">Anasayfa</button>
+    </form>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var main = document.querySelector('.main');
+      main.classList.add('visible');
+    });
+
+    function redirectToHome() {
+      window.location.href = "/";
+    }
+  </script>
+</body>
+</html>

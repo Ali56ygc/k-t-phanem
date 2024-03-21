@@ -1,0 +1,80 @@
+/*  #0000ff
+    rgb (0,0,255)
+    blue  */
+
+body {
+    background: linear-gradient(rgb(3, 3, 90), rgb(37, 37, 172));
+    min-height: 600px;
+    justify-content: center;
+    display: flex;
+}
+
+label {
+    color: white;
+    font-size: 45px;
+    justify-content: center;
+    display: flex;
+}
+
+.main {
+    margin-top: 100px;
+    width: 200px;
+    height: 300px;
+    box-shadow: 30px 20px 130px;
+    border-radius: 10px;
+}
+
+input {
+    width: 150px;
+    height: 20px;
+    padding: 10px;
+    margin: 5px;
+    margin-left: 12px;
+}
+
+button {
+    width: 100px;
+    height: 30px;
+    background-color: rgb(15, 15, 109);
+    color: white;
+    margin: 50px;
+}
+
+p {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    height: 20px;
+}
+
+a {
+    background-color: rgb(62, 165, 235);
+    border: 2px solid purple;
+    border-radius: 12px;
+    text-decoration: none;
+    height: 20px;
+    color: white;
+    justify-content: center;
+    display: flex;
+}
+.td{text-align: center;}
+.th{text-align: center;}
+.urunler {
+    background-color: rgb(140, 59, 199);
+    width: 1400px;
+    height: 100%;
+    color: black
+}
+
+
+
+.ekle {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 100%;
+    text-align: center;
+    text-decoration: none;
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+    border-radius: 8px;
+}

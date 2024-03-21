@@ -1,0 +1,53 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kitap Ekle</title>
+        <link rel="stylesheet" href="/static/css/ekle.css">
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var isbnInput = document.querySelector('input[name="isbn"]');
+                var form = document.querySelector('form');
+                var hataLabel = document.querySelector('.hata');
+
+                form.addEventListener('submit', function (event) {
+                    var isbnValue = isbnInput.value;
+                    if (isbnExists(isbnValue)) {
+                        event.preventDefault(); 
+                        hataLabel.innerText = 'Bu ISBN numarasına sahip bir kitap zaten bulunuyor.';
+                        isbnInput.focus(); 
+                    }
+                });
+
+                function isbnExists(isbn) {
+                    var existingIsbns = ['1234567890', '0987654321', '1112223334'];
+                    return existingIsbns.includes(isbn);
+                }
+            });
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <form action="{{ url_for('urun_ekle') }}" method="post" enctype="multipart/form-data">
+                <label>Kitap</label>
+                <input type="text" name="isbn" placeholder="ISBN Kodu" required>
+                <input type="text" name="isim" placeholder="Kitabın Adı" required>
+                <input type="text" name="tur" placeholder="Kitabın Türü" required>
+                <input type="text" name="yazar" placeholder="Yazarın İsmi" required>
+                <input type="text" name="fiyat" placeholder="Fiyat" required>
+                <input type="file" name="resim" placeholder="Resim Seçiniz" required>
+        
+                <button>Kaydet</button>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <label class="hata">{{ messages[0] }}</label>
+                {% endif %}
+            {% endwith %}
+                <label class="hata">{{ hata }}</label>
+                <a href="{{ url_for('urunler') }}" class="vazgec">Vazgeç</a>
+            </form>
+        </div>
+
+    </body>
+    </html>

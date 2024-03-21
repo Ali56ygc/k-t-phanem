@@ -1,0 +1,176 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2; /* Arkaplan rengi */
+}
+
+header {
+    background-color: #333; /* Başlık arka plan rengi */
+    color: white; /* Başlık metin rengi */
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    margin: 20px;
+}
+
+.urunler {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.urunler th,
+.urunler td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.urunler th {
+    background-color: #333; /* Tablo başlık arka plan rengi */
+    color: white; /* Tablo başlık metin rengi */
+}
+
+.urunler tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Çift sıradaki satırların arka plan rengi */
+}
+
+.urunler tbody tr:hover {
+    background-color: #ddd; /* Hover yapıldığında arka plan rengi */
+}
+
+.urunler img {
+    max-width: 90px; /* Resim maksimum genişliği */
+    max-height: 90px; /* Resim maksimum yüksekliği */
+}
+
+.urunler .islemler a {
+    margin-right: 5px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: white;
+    border-radius: 3px;
+}
+
+.urunler .islemler a:hover {
+    background-color: #555;
+    border-color: #555;
+}
+
+.anasayfabutonu {
+    display: inline-block;
+    padding: 8px 15px; 
+    margin-top: 10px;
+    background-color: #0099CC;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none; 
+    cursor: pointer;
+    font-weight: bold; 
+    font-family: 'Arial', sans-serif; 
+    font-size: 16px; 
+    margin-left: 40%; 
+    transition: background-color 0.3s ease;
+    height: 60px;
+  }
+.ekle {
+    display: inline-block;
+    background-color: green; 
+    color: white; 
+    padding: 8px 15px; 
+    border: 12px solid green; 
+    border-radius: 5px; 
+    margin-top: 3px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-family: 'Arial', sans-serif; 
+    font-size: 16px; 
+    margin-left: 3px;
+}
+
+.ekle:hover {
+    background-color: darkgreen; 
+    border-color: darkgreen; 
+}
+
+
+.arama-ekle {
+    display: flexbox;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.arama {
+display: flex;
+    align-items: center; 
+    padding: 10px;
+}
+
+.arama label {
+    margin-right: 10px; 
+}
+
+
+.arama input {
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    flex: 1; 
+    margin-right: 4px;
+}
+.exit {
+    color: white; 
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 40px;
+    padding: 10px 15px;
+    background-color: #FF5555; 
+    border: 12px solid #FF5555; 
+    border-radius: 5px;
+    margin-top: 10px; 
+    text-decoration: none; 
+    font-weight: bold; 
+    font-family: 'Arial', sans-serif; 
+    font-size: 16px; 
+    margin-left: 2px; 
+}
+
+.exit:hover {
+    background-color: #CC0000; 
+    border-color: #CC0000; 
+}
+
+.guncelle{    
+    color: white; 
+    text-decoration: none;
+    display: inline-block;
+    background-color: #a872fa; 
+    border: 20px solid #a872fa; 
+    border-radius: 5px;
+    text-decoration: none; 
+    font-weight: bold; 
+    font-family: 'Arial', sans-serif; 
+    font-size: 13px; 
+    margin-left: 2px; 
+}
+.sil{    
+    color: white; 
+    text-decoration: none;
+    display: inline-block;
+    background-color: #480612; 
+    border: 20px solid #480612; 
+    border-radius: 5px;
+    text-decoration: none; 
+    font-weight: bold; 
+    font-family: 'Arial', sans-serif; 
+    font-size: 13px; 
+    margin-left: 2px; 
+}

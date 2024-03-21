@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitap Bilgileri Güncelleme</title>
+    <link rel="stylesheet" href="/static/css/guncelle.css">
+</head>
+<body>
+
+<div class="sayfag">
+    <form action="{{ url_for('urun_kaydet') }}" method="post" enctype="multipart/form-data" class="kitap-form">
+        <h2>Kitap Bilgilerini Güncelle</h2>
+        <label for="id">İd</label>
+        <input type="text" name="id"    value="{{ urun[0] }}"  readonly>
+        <label for="isbn">ISBN Kodu</label>
+        <input type="text" id="isbn" name="isbn" value="{{ urun[1] }}" placeholder="ISBN Kodu" required>
+
+        <label for="isim">Kitabın İsmi</label>
+        <input type="text" id="isim" name="isim" value="{{ urun[2] }}" placeholder="Kitabın İsmi" required>
+
+        <label for="tur">Kitap Türü</label>
+        <input type="text" id="tur" name="tur" value="{{ urun[3] }}" placeholder="Kitap Türü" required>
+
+        <label for="yazar">Yazarın Adı</label>
+        <input type="text" id="yazar" name="yazar" value="{{ urun[4] }}" placeholder="Yazarın Adı" required>
+
+        <label for="fiyat">Fiyat</label>
+        <input type="number" id="fiyat" name="fiyat" value="{{ urun[5] }}" placeholder="Fiyat" required>
+
+        <label for="resim">Resim Seçiniz</label>
+        <input type="file" id="resim" name="resim" required>
+
+        <button type="submit">Kaydet</button>
+
+        {% if hata %}
+            <p class="hata">{{ hata }}</p>
+        {% endif %}
+    </form>
+</div>
+
+</body>
+</html>
